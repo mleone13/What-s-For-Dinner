@@ -42,27 +42,27 @@ fetch('https://thecocktaildb.com/api/json/v1/1/random.php')
             cDir.textContent= data.drinks[i].strInstructions;
             cPic.src= data.drinks[i].strDrinkThumb;
 
-            if (cIng2.textContent=('null')){
-                cIng2.textContent='';
-            }
-            if (cIng3.textContent=('null')){
-                cIng3.textContent='';
-            }
-            if (cIng4.textContent=('null')){
-                cIng4.textContent='';
-            }
-            if (cIng5.textContent=('null')){
-                cIng5.textContent='';
-            }
-            if (cIng6.textContent=('null')){
-                cIng6.textContent='';
-            }
-            if (cIng7.textContent=('null')){
-                cIng7.textContent='';
-            }
-            if (cIng8.textContent=('null')){
-                cIng8.textContent='';
-            }
+            // if (cIng2.textContent=('null')){
+            //     cIng2.textContent='';
+            // }
+            // if (cIng3.textContent=('null')){
+            //     cIng3.textContent='';
+            // }
+            // if (cIng4.textContent=('null')){
+            //     cIng4.textContent='';
+            // }
+            // if (cIng5.textContent=('null')){
+            //     cIng5.textContent='';
+            // }
+            // if (cIng6.textContent=('null')){
+            //     cIng6.textContent='';
+            // }
+            // if (cIng7.textContent=('null')){
+            //     cIng7.textContent='';
+            // }
+            // if (cIng8.textContent=('null')){
+            //     cIng8.textContent='';
+            // }
 
             drinkName.append(cName);
             ingredients.append(cIng,cIng2,cIng3,cIng4,cIng5,cIng6,cIng7);
