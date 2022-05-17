@@ -1,22 +1,29 @@
-function getIngredians(food) {
+function showRecipe(results) {
+  var recipeCard = results.recipes[0].title;
+  console.log(recipeCard);
+}
+
+function getRecipe() {
   const options = {
     method: "GET",
-    url: "https://tasty.p.rapidapi.com/recipes/list",
-    params: { from: "0", size: "20", tags: "under_30_minutes", q: food },
     headers: {
-      "X-RapidAPI-Host": "tasty.p.rapidapi.com",
-      "X-RapidAPI-Key": api_key,
+      "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      "X-RapidAPI-Key": "64cf370da4mshd702b86e12ef073p1f91a0jsn145f6b5ca991",
     },
   };
-
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data);
+  fetch(
+    "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags&number=1",
+    options
+  )
+    .then((response) => {
+      return response.json();
     })
-    .catch(function (error) {
-      console.error(error);
-    });
-};
+    .then((response) => showRecipe(response))
+    .catch((err) => console.error(err));
+}
 
-getIngredians('pasta')
+$("#search-Btn").on("click", getRecipe);
+
+// let app = document.querySelector("#recipe-main");
+// app.append("append(function)showRecipe");
+// console.log(app.textContent);
