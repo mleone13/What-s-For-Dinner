@@ -24,6 +24,4 @@ function getRecipe() {
 
 $("#search-Btn").on("click", getRecipe);
 
-// let app = document.querySelector("#recipe-main");
-// app.append("append(function)showRecipe");
-// console.log(app.textContent);
+
