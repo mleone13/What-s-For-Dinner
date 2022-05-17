@@ -1,7 +1,29 @@
 function showRecipe(results) {
-  var recipeCard = results.recipes[0].title;
-  console.log(recipeCard);
+  console.log(results);
+  var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
+  var imageDiv = $("<div>").addClass("card-image");
+  var figureEl = $("<figure>").addClass("image is-4by3");
+  var imageEl = $("<img>")
+    .attr("src", results.recipes[0].image)
+    .attr("alt", results.recipes[0].title);
+  var recipeTitle = $("<h7>")
+    .addClass("title is-4")
+    .text(results.recipes[0].title);
+  var saveBtn = $("<button>")
+    .text("save")
+    .addClass("saveBtn")
+    .attr("data-id", results.recipes[0].id)
+    .on("click", function () {
+      localStorage.setItem("recipe", results.recipes[0].id);
+    });
+  $("#recipe-main").append(
+    recipeCard.append(
+      imageDiv.append(figureEl.append(imageEl)),
+      recipeTitle.append(saveBtn)
+    )
+  );
 }
+
 
 function getRecipe() {
   const options = {
@@ -22,6 +44,6 @@ function getRecipe() {
     .catch((err) => console.error(err));
 }
 
+// $(selector).append(content,function(index,html))
+
 $("#search-Btn").on("click", getRecipe);
-
-
