@@ -1,12 +1,27 @@
-localStorage.clear()
-function getStoredRecipe() {
-    var recentRecipe = localStorage.getItem('food')
-    console.log(JSON.parse(recentRecipe))
-    // console.log(recentRecipe)
-}
-function storeRecipe(recipe) {
-   localStorage.setItem('food' , JSON.stringify(recipe.recipes[0]));
-   getStoredRecipe()
+function showRecipe(results) {
+  console.log(results);
+  var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
+  var imageDiv = $("<div>").addClass("card-image");
+  var figureEl = $("<figure>").addClass("image is-4by3");
+  var imageEl = $("<img>")
+    .attr("src", results.recipes[0].image)
+    .attr("alt", results.recipes[0].title);
+  var recipeTitle = $("<h7>")
+    .addClass("title is-4")
+    .text(results.recipes[0].title);
+  var saveBtn = $("<button>")
+    .text("save")
+    .addClass("saveBtn")
+    .attr("data-id", results.recipes[0].id)
+    .on("click", function () {
+      localStorage.setItem("recipe", results.recipes[0].id);
+    });
+  $("#recipe-main").append(
+    recipeCard.append(
+      imageDiv.append(figureEl.append(imageEl)),
+      recipeTitle.append(saveBtn)
+    )
+  );
 }
 
 
@@ -26,55 +41,7 @@ function getRecipe() {
     .then((response) => {
       return response.json();
     })
-    .then((response) => storeRecipe(response))
+    .then((response) => showRecipe(response))
     .catch((err) => console.error(err));
 }
-getRecipe()
-
-// localStorage.setItem('random' , 'mental help')
-
-
-
-
-
-//local storage
-
-// const apiCallData = [
-//     {
-//         name: 'Recipe',
-//         description: 'saved recipe',
-//         info: 'recipe info',
-//     }
-// ]
-
-// var usefulResults = []
-
-// function recipeClickListenerFired(clickedRecipe) {
-// localStorage.clear()
-// console.log(clickedRecipe)
-// receive an event from click listener
-// assign the value of the clicked div to clickedValue
-// value of clicked div is = 'chicken thing 2'
-// var clickedValue = 'Recipe'
-// usefulResults.map((result) => {
-//     if (result.name === clickedValue) {
-//     var recipeForStorage = JSON.stringify(result)
-//     console.log(result)
-//     localStorage.setItem('JSON', recipeForStorage)
-//     }
-// }
-// }
-
-//   function filterUsefulData(data) {
-//     for (let i = 0; i < data.length; i++) {
-//       // console.log(data[i])
-//       var usefulData = {
-//         name: data[i].name,
-//         description: data[i].description,
-//       }
-//       usefulResults.push(usefulData)
-//       // console.log(usefulData)
-//     }
-
-//     recipeClickListenerFired(usefulResults[0])
-//   }
+ $("#search-Btn").on("click", getRecipe);
