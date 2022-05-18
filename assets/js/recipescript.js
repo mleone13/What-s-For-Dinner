@@ -1,5 +1,3 @@
-var recipeArray = [];
-
 function showRecipe(results) {
   console.log(results);
   var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
@@ -11,14 +9,23 @@ function showRecipe(results) {
   var recipeTitle = $("<h7>")
     .addClass("title is-4")
     .text(results.recipes[0].title);
+
+  // var course = $("<h7>")
+  //   .addClass("title is-4")
+  //   .text(results.recipes[0].dishTypes);
+
+  // var instructionCard = $("<h7>")
+  //   .addClass("instructions is-4")
+  //   .text(results.recipes[0].instructions);
+
   var saveBtn = $("<button>")
     .text("save")
     .addClass("saveBtn")
     .attr("data-id", results.recipes[0].id)
     .on("click", function () {
       localStorage.setItem("recipe", results.recipes[0].id);
-      recipeArray.push("recipe", results.recipes[0].id);
     });
+
   $("#recipe-main").append(
     recipeCard.append(
       imageDiv.append(figureEl.append(imageEl)),
