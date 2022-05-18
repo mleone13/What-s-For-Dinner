@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/bulma.css" />
-    <title>Food & Drink Generator</title>
-  </head>
-  <body>
-    <header>
-      <h1 class="pure-u-1 pure-u-md-1-3 title">What's For Dinner?</h1>
-    </header>
-    <div>
-      <div>
-        <h2 class="pure-u-1 pure-u-md-1-3 recipe-header">Find a Recipe</h2>
-        <button id="search-Btn" class="button-success pure-button">
-          <i class="fa-thin fa-utensils fa-lg"></i>
-          Click Here
-        </button>
-      </div>
-      <div id="recipe-main"></div>
-    </div>
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Next Meal</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+</head>
 
-    <!--<div class="pure-u-1 pure-u-md-1-3">Your Recipe</div>-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./assets/js/recipescript.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
-   
-   
-    <title>Document</title>
+<body>
+ <section class="hero">
+        <figure class="image">
+            <img src="https://thumbs.dreamstime.com/b/wooden-table-food-top-view-cafe-102532611.jpg">
+        </figure>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <!-- <h2 class="title">Your Next Meal</h2> -->
+            <header>
+              <h1 class="pure-u-1 pure-u-md-1-3 title">Your Next Meal?</h1>
+            </header>
+            <p>Unsure what meal to make? Try generating a recipe and a cocktail on us! If you like what you see, save it for another meal later!</p>
+
+
+
+            <!-- Start of the recipe columns -->
+            <div class="columns is-centered" style="padding: 2rem">
+              <section class="recipe-column">
+                <div class="column">
+                  <div class="step-info">
+                    <!-- <div class="card"> -->
+                        <div class="card-image">
+                          
+                            </figure>
+                        </div>
+                        
+                     
+                                
+                                    <p class="title">Recipe</p>
+                                    <div>
+                                      <section class="hero">
+                                        <h2 class="pure-u-1 pure-u-md-1-3 recipe-header">Find a Recipe</h2>
+                                        <button id="search-Btn">
+                                          
+                                          Click Here
+                                        </button>
+                                      </div>
+                                      <div id="recipe-main"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Start of cocktail column -->
+                  
+                <div class="column">
+                  <section class="hero">
+                    <section class="cocktail-column"></section>
+                    <div class="columns is-centered" style="padding: 2rem">
+                      <section class="recipe-column">
+                        <div class="column">
+                          <p class="title">Cocktail</p>
+                          <title>Document</title>
+
   </head>
   <body>
     <!-- container fzooor the cocktail features -->
@@ -47,6 +78,53 @@
       <div class="drink-directions" id="how"></div>
       <div class="drink-picture" id="gram-pic" alt="drink picture"></div>
     </div>
-    <script src="./assets/js/script.js"></script>
-  </body>
+
+
+    <div class="columns is-centered" style="padding: 2rem">
+      <div class="column">
+          <div class="card">
+              <div class="card-image">
+                  <figure id="gram-pics" class="image is-20x20" alt="image of drink">
+                  </figure>
+              </div>
+              <div class="card-content">
+                  <div class="media">
+                      <div class="media-content">
+                          <p class="title is-4" id="d-name2"></p>
+                      </div>
+                  </div>
+                  <div id="what" class="content">
+                    <ul id="whats"></ul>
+
+                  </div>
+
+                  <div id="how2" class="content">
+                  
+                  </div>
+              </div>
+          </div>
+      </div>
+
+                        
+                
+                <script
+                  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"
+                ></script>
+                <script src="./assets/js/recipescript.js"></script>
+                <link rel="stylesheet" href="./assets/css/style.css">
+               
+               
+                
+                </div>
+                <script src="./assets/js/script.js"></script>
+              </body>
+            </html>
+            </div>
+        </div>
+        </div>
+    </section>
+
 </html>
