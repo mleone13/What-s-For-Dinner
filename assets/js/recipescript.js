@@ -25,6 +25,7 @@ function showRecipe(results) {
       recipeTitle.append(saveBtn)
     )
   );
+  document.getElementById('getRecipe').innerHTML=add-recipe;
 }
 
 function getRecipe() {
