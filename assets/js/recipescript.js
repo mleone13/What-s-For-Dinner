@@ -1,5 +1,3 @@
-var recipeArray = [];
-
 function showRecipe(results) {
   console.log(results);
   var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
@@ -17,7 +15,7 @@ function showRecipe(results) {
     .attr("data-id", results.recipes[0].id)
     .on("click", function () {
       localStorage.setItem("recipe", results.recipes[0].id);
-      recipeArray.push("recipe", results.recipes[0].id);
+    
     });
   $("#recipe-main").append(
     recipeCard.append(
@@ -25,7 +23,7 @@ function showRecipe(results) {
       recipeTitle.append(saveBtn)
     )
   );
-  document.getElementById('getRecipe').innerHTML=add-recipe;
+ 
 }
 
 function getRecipe() {
