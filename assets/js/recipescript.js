@@ -1,7 +1,6 @@
-var recipeArray = [];
-
 function showRecipe(results) {
   console.log(results);
+  $("#recipe-main").empty()
   var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
   var imageDiv = $("<div>").addClass("card-image");
   var figureEl = $("<figure>").addClass("image is-4by3");
@@ -17,7 +16,7 @@ function showRecipe(results) {
     .attr("data-id", results.recipes[0].id)
     .on("click", function () {
       localStorage.setItem("recipe", results.recipes[0].id);
-      recipeArray.push("recipe", results.recipes[0].id);
+    
     });
   $("#recipe-main").append(
     recipeCard.append(
@@ -25,6 +24,7 @@ function showRecipe(results) {
       recipeTitle.append(saveBtn)
     )
   );
+ 
 }
 
 function getRecipe() {
