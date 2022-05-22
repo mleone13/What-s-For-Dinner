@@ -1,5 +1,6 @@
 function showRecipe(results) {
   console.log(results);
+  $("#recipe-main").empty()
   var recipeCard = $("<div>").addClass("card").attr("style", "width:250px");
   var imageDiv = $("<div>").addClass("card-image");
   var figureEl = $("<figure>").addClass("image is-4by3");
