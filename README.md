@@ -32,4 +32,13 @@ Given I am unsure of what to make for my meal, then I go to the Your Next Meal w
 When I enter the website I expect to have a recipe generated
 Then a food and cocktail recipe is generated.
 
+## Issues and Future Development Goals
+
+1. Issues with the cocktail API. It was very difficult to work with.
+2. Unable to resize cocktail images due to bulma and the cocktail API.
+3. Future Goal - Restrict recipes based on ingredients/dietary restirictions  
+4. Future Goal - Create a meal plan by week
+5. Future Goal - Save multiple favorite recipes to view on a separate page
+6. Future Goal - Generate a shopping list
+
 
