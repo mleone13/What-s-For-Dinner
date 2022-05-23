@@ -42,3 +42,7 @@ Then a food and cocktail recipe is generated.
 6. Future Goal - Generate a shopping list
 
 
+<img width="1440" alt="Screen Shot 2022-05-22 at 7 28 32 PM" src="https://user-images.githubusercontent.com/101609307/169732188-6c9de4d6-43ea-4a56-a89d-11f236414741.png">
+
+<img width="1440" alt="Screen Shot 2022-05-22 at 7 28 25 PM" src="https://user-images.githubusercontent.com/101609307/169732200-5c599393-ae5d-4030-9851-86ef239fc06a.png">
+
