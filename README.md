@@ -26,15 +26,16 @@ Samantha-LocalStorage & Styling
 3. When the user clicks on the meal recipe button, they also have a save button option to save the recipe into local storage.
 
 User Story:
-As a person searching for what to eat for their next meal, I want a website that can help me figure it out
-Given I am unsure of what to make for my meal, then I go to the Your Next Meal website.
-When I enter the website I expect to have a recipe generated
-Then a food and cocktail recipe is generated.
+As a hungry person with limited time and an indecisive nature
+I want to have a meal option provided to me
+So that I can take the guesswork out of selecting my next meal
+
+
 
 ## Issues and Future Development Goals
 
 1. Issues with the cocktail API. It was very difficult to work with.
-2. Unable to resize cocktail images due to bulma and the cocktail API.
+2. Initially unable to resize cocktail images due to bulma and the cocktail API.
 3. Future Goal - Restrict recipes based on ingredients/dietary restirictions  
 4. Future Goal - Create a meal plan by week
 5. Future Goal - Save multiple favorite recipes to view on a separate page
