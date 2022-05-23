@@ -1,11 +1,11 @@
-team10-project
-Purpose
+#team10-project
+#Purpose
 A tool to cure indecisiveness when a person can’t think of what they want to eat for their next meal. This tool randomly generates a meal for you as well as a cocktail to go with the meal. The user also has the option to save their generated meal into local storage for later use.
 
-Built with
+##Built with
 JavaScript jQuery Bulma CSS
 
-Website
+###Website
 Contribution
 Created by Samantha Gibbs, Ernesto Martinez and Mary Leone
 
