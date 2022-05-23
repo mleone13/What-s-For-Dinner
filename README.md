@@ -24,4 +24,5 @@ Future Goal - Create a meal plan by week
 Future Goal - Save multiple favorite recipes to view on a separate page
 Future Goal - Generate a shopping list
 
+![image](https://user-images.githubusercontent.com/74919680/169738000-29390a1d-9d22-41b4-9882-5ab02f2ac4f0.png)
 
